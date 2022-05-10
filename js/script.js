@@ -11,10 +11,10 @@ $(document).ready(function () {
         // 사용자가 체크 박스를 체크했다면
         // 쿠키를 구어준다.
         let temp = quick_day_bt.hasClass('quick-day-bt-active');
-        if(temp == true) {
+        if (temp == true) {
             // 사용자가 체크를 했다면 쿠키를 생성합니다.
             //setToday(quick_day_name, 1);
-        }        
+        }
     });
 
     // 하루동안 열지않기 버튼
@@ -22,11 +22,11 @@ $(document).ready(function () {
     // 쿠키의 이름
     let quick_day_name = 'today';
 
-    quick_day_bt.click(function(){        
+    quick_day_bt.click(function () {
         let temp = $(this).hasClass('quick-day-bt-active');
-        if(temp != true) {
+        if (temp != true) {
             $(this).addClass('quick-day-bt-active');
-        }else{
+        } else {
             $(this).removeClass('quick-day-bt-active');
         }
     });
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     // 창열기  
     function todayOpen(winName) {
-        let blnCookie = getCookie(winName);       
+        let blnCookie = getCookie(winName);
         console.log(blnCookie);
         if (!blnCookie) {
             // 하루동안 보이기
@@ -50,8 +50,8 @@ $(document).ready(function () {
     }
     // 쿠키셋팅
     function setToday(winName, expiredays) {
-        setCookie(winName, "expire", expiredays);        
-        
+        setCookie(winName, "expire", expiredays);
+
     }
     // 쿠키 가져오기  
     function getCookie(name) {
@@ -174,6 +174,7 @@ $(document).ready(function () {
             header.removeClass('header-fixed');
             main.removeClass('main-acitve');
         }
+
     });
 
     // 위로가기
@@ -374,35 +375,51 @@ $(document).ready(function () {
         let title = temp_arr[4].trim();
 
         // 실제 html 로 사용할 글자를 만든다.
-        let temp_html = '<div class="health-box">';
+        let temp_html = `
+       <div class="health-box" data-aos="fade-up" data-aos-duration="800">
+           <a href="${link}" alt="${alt}">
+               <span class="health-img">
+                   <img src="${img}">
+               </span>
+               <span class="health-cate">
+                   ${cate}
+               </span>
+               <span class="health-tit">
+                   ${title}
+               </span>
+           </a>
+       </div>
+   `;
 
-        // a 태그를 생성한다.
-        temp_html = temp_html + '<a href=';
-        temp_html = temp_html + link;
-        temp_html = temp_html + ' ';
-        temp_html = temp_html + 'alt=';
-        temp_html = temp_html + alt;
-        temp_html = temp_html + '>';
+        // let temp_html = '<div class="health-box" data-aos="fade-up" data-aos-duration="800">';
 
-        // 이미지가 들어간다.
-        temp_html = temp_html + '<span class="health-img">';
-        temp_html = temp_html + '<img src=';
-        temp_html = temp_html + img;
-        temp_html = temp_html + '>';
-        temp_html = temp_html + '</span>';
+        // // a 태그를 생성한다.
+        // temp_html = temp_html + '<a href=';
+        // temp_html = temp_html + link;
+        // temp_html = temp_html + ' ';
+        // temp_html = temp_html + 'alt=';
+        // temp_html = temp_html + alt;
+        // temp_html = temp_html + '>';
 
-        // 카테고리 출력
-        temp_html = temp_html + '<span class="health-cate">';
-        temp_html = temp_html + cate;
-        temp_html = temp_html + '</span>'
+        // // 이미지가 들어간다.
+        // temp_html = temp_html + '<span class="health-img">';
+        // temp_html = temp_html + '<img src=';
+        // temp_html = temp_html + img;
+        // temp_html = temp_html + '>';
+        // temp_html = temp_html + '</span>';
 
-        // 타이틀 출력
-        temp_html = temp_html + '<span class="health-tit">';
-        temp_html = temp_html + title;
-        temp_html = temp_html + '</span>';
+        // // 카테고리 출력
+        // temp_html = temp_html + '<span class="health-cate">';
+        // temp_html = temp_html + cate;
+        // temp_html = temp_html + '</span>'
 
-        temp_html = temp_html + '</a>'
-        temp_html = temp_html + '</div>';
+        // // 타이틀 출력
+        // temp_html = temp_html + '<span class="health-tit">';
+        // temp_html = temp_html + title;
+        // temp_html = temp_html + '</span>';
+
+        // temp_html = temp_html + '</a>'
+        // temp_html = temp_html + '</div>';
 
         return temp_html;
     }
@@ -431,6 +448,11 @@ $(document).ready(function () {
 
 //모든 리소스 로딩 완료
 window.onload = function () {
+
+    // aos 관련
+    AOS.init({
+        ones: true,
+    });
 
     // 퀵링크 슬라이드
     let sw_quick = new Swiper('.sw-quick', {
