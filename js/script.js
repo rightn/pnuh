@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    let modal_close=$('.modal-close');
+    let modal=$('.modals');
+    modal_close.click(function(){
+        modal.hide();
+    })
+
+})
+$(document).ready(function () {
     // 배너
     let quick_banner = $('.quick-banner');
     let quick_day_close = $('.quick-day-close');
