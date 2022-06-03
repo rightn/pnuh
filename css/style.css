@@ -58,9 +58,7 @@ body {
     width: 1280px;
     margin: 0 auto;
 }
-
 /* 모달창 */
-
 /* 모달창*/
 .modal{
     position: fixed;
@@ -286,7 +284,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-
+    
     /* 처음에는 안보이는 것으로 출발  */
     display: none;
     width: 100%;
@@ -338,7 +336,6 @@ body {
     white-space: nowrap;
     cursor: pointer;
 }
-
 .quick-day-bt::after {
     content: '';
     position: absolute;
@@ -885,7 +882,7 @@ body {
     width: 100%;
     height: 100px;
     background-color: #fff;
-    z-index: 999;
+    z-index: 999;    
 }
 
 
@@ -972,8 +969,7 @@ body {
 .gnb-li-focus a {
     color: #00589d !important;
 }
-
-.gnb-li-focus .gnb-bar {
+.gnb-li-focus .gnb-bar{
     width: 100% !important;
 }
 
@@ -1159,8 +1155,8 @@ body {
     left: 0;
     top: 0;
     display: block;
-    height: 100px;
-    width: 100%;
+    height: 100px;    
+    width: 100%; 
     background-color: #fff;
     border-bottom: 1px solid #e0e1e5;
     overflow: hidden;
@@ -1177,7 +1173,7 @@ body {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
 
-
+    
 }
 
 
@@ -1242,13 +1238,12 @@ body {
 .submenu-box {
     position: relative;
     display: block;
-    width: 100%;
-    ;
+    width: 100%;;
 }
 
 .submenu-list {
     position: relative;
-    display: table;
+    display: table; 
 
     table-layout: fixed;
     width: 100%;
@@ -1263,7 +1258,6 @@ body {
     border-right: 1px solid #dcdcdc;
     padding: 0 20px;
 }
-
 .no-line {
     border-right: 0 !important;
 }
@@ -1280,7 +1274,7 @@ body {
     margin-bottom: 20px;
 }
 
-.submenu-list-tit:hover {
+.submenu-list-tit:hover{
     color: #00589e;
 }
 
@@ -1306,8 +1300,7 @@ body {
     letter-spacing: -1px;
     text-decoration: none;
 }
-
-.submenu-list-sub li a:hover {
+.submenu-list-sub li a:hover{
     color: #00589e;
 }
 
