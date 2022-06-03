@@ -61,52 +61,48 @@ body {
 
 /* 모달창 */
 
-.modals {
+/* 모달창*/
+.modal{
     position: fixed;
-    left: 360px;
-    top: 160px;
-    display: block;
-    width: 50%;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.7);
+    left:0;
+    top:0;
+    display:block;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7);
     z-index: 99999;
 }
-
-.modal-wrap {
+.modal-wrap{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    display: block;
-    height: 250px;
-    width: 400px;
-    transform: translate(-50%, -50%);
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display:block;
+    width:400px;
+    height:250px;
     background-color: #fff;
     border-radius: 10px;
 }
-
-.modal-close {
+.modal-close{
     position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 30px;
-    height: 30px;
-    font-size: 30px;
+    right:10px;
+    top:10px;
+    width:30px;
+    height:30px;
+    font-size:30px;
     display: block;
-    cursor: pointer;
+    cursor:pointer;
     border: 0;
 }
 
-.modal-write {
-    position: absolute;
-    display: block;
-    top: 45%;
-    left: 25%;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    line-height: 30px;
+.modal-wrap>p{
+   position: absolute;
+   display:block;
+   top:45%;
+   left:15%;
+   text-align: center;
+  line-height: 25px;
 }
-
 /* pnuh 네트워크 */
 .pnuh-popup {
     position: fixed;
